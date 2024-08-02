@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Management App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Home Screen -->
+        <div id="home" class="screen">
+            <h1>Welcome to LAN Management</h1>
+            <button id="showLogin">Login</button>
+            <button id="showRegister">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="screen">
+            <h2>Login</h2>
+            <form id="login">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+                <p id="loginError"></p>
+            </form>
+            <button id="backToHome">Back</button>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerForm" class="screen">
+            <h2>Register</h2>
+            <form id="register">
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" required>
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" required>
+                <button type="submit">Register</button>
+                <p id="registerError"></p>
+            </form>
+            <button id="backToHomeFromRegister">Back</button>
+        </div>
+
+        <!-- Device Management -->
+        <div id="deviceManagement" class="screen">
+            <h2>Manage Devices</h2>
+            <button id="logout">Logout</button>
+            <button id="showDevices">Show Devices</button>
+            <ul id="deviceList"></ul>
+        </div>
+    </div>
+
+    <!-- Include Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Include Renderer Script -->
+    <script src="renderer.js"></script>
+</body>
+</html>
